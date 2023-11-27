@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048 Game</title>
+
+    <script>
+        let Nums = [2,4,8,16,32,64,128,256,512,1024,2048];
+        let arr = new Array(4);
+        for (var i = 0; i < arr.length; i++) {
+            arr[i] = new Array(4);
+            for(let j = 0; j < arr[i].length; j++){
+                arr[i][j] = 0;
+            }
+        }
+        function NextTrun(){
+            let randNum = Math.floor(Math.random * 2);
+            let randPlace = arr[Math.floor(Math.random() * 4)][Math.floor(Math.random() * 4)];
+        }
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'ArrowLeft') {
+                
+            }
+        });
+
+    </script>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #eee;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        #game-container {
+            width: 300px;
+            height: 300px;
+            margin: 50px auto;
+            border: 5px solid #ccc;
+            background-color: #faf8ef;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .tile {
+            width: 65px;
+            height: 65px;
+            margin: 1px;
+            display:inline-flex;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 65px;
+            border-radius: 5px;
+        }
+
+        .tile-2 { background-color: #eee4da; color: #776e65; }
+        .tile-4 { background-color: #ede0c8; color: #776e65; }
+        .tile-8 { background-color: #f2b179; color: #f9f6f2; }
+        .tile-16 { background-color: #f59563; color: #f9f6f2; }
+        .tile-32 { background-color: #f67c5f; color: #f9f6f2; }
+        .tile-64 { background-color: #f65e3b; color: #f9f6f2; }
+        .tile-128 { background-color: #edcf72; color: #f9f6f2; }
+        .tile-256 { background-color: #edcc61; color: #f9f6f2; }
+        .tile-512 { background-color: #edc850; color: #f9f6f2; }
+        .tile-1024 { background-color: #edc53f; color: #f9f6f2; }
+        .tile-2048 { background-color: #edc22e; color: #f9f6f2; }
+
+        .empty-tile {
+            background-color: #cdc1b4;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <!-- 4x4 형태의 빈 타일을 나열합니다. -->
+        <div class="tile empty-tile"></div>
+        <div class="tile empty-tile"></div>
+        <div class="tile empty-tile"></div>
+        <div class="tile empty-tile"></div>
+
+        <div class="tile empty-tile"></div>
+        <div class="tile empty-tile"></div>
+        <div class="tile empty-tile"></div>
+        <div class="tile empty-tile"></div>
+
+        <div class="tile empty-tile"></div>
+        <div class="tile empty-tile"></div>
+        <div class="tile empty-tile"></div>
+        <div class="tile empty-tile"></div>
+
+        <div class="tile empty-tile"></div>
+        <div class="tile empty-tile"></div>
+        <div class="tile empty-tile"></div>
+        <div class="tile empty-tile"></div>
+    </div>
+</body>
+</html>
